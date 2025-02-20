@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>red Points</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1.5rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        section {
+            padding: 2rem;
+        }
+        /* Canvas with 4:3 Aspect Ratio */
+        #webgl-canvas {
+            width: 100%;
+            height: auto;
+            background-color: #000;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My first Project red Points 2021</h1>
+</header>
+
+<section>
+    <h2>My first Project red Points</h2>
+    <p>Click below to explore my WebGL and shader project!</p>
+
+    <!-- WebGL Canvas with 4:3 Aspect Ratio -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <h3>Code Snippet webgl v1.0, glsl v1.2</h3>
+    <p>this is my shader code below.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+</footer>
+
+<script>
+    // Example WebGL setup
+    const canvas = document.getElementById('webgl-canvas');
+    const gl = canvas.getContext('webgl');
+
+    if (!gl) {
+        alert("WebGL not supported!");
+    } else {
+        // Set canvas width and height for 4:3 aspect ratio
+        canvas.width = window.innerWidth;
+        canvas.height = canvas.width * 3 / 4;
+
+        // Clear the canvas with a color
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+
+        // Your WebGL and shader code here
+    }
+</script>
+
+</body>
+</html>
