@@ -27,8 +27,8 @@
             padding: 2rem;
         }
         #webgl-canvas {
-            width: 640px;
-            height: 480px;
+            width: 800px;
+            height: 600px;
             background-color: #000;
         }
         footer {
@@ -132,7 +132,10 @@
     window.addEventListener("keydown", (event) => {
         const step = 0.05;
         if (event.key === "ArrowUp") translation[1] += step;
-        if (event.key === "ArrowDown") translation[1] -= step;
+        if (event.key === "ArrowDown") {
+            translation[1] -= step;
+            window.scrollBy(0, 20); // Scroll down when ArrowDown is pressed
+        }
         if (event.key === "ArrowLeft") translation[0] -= step;
         if (event.key === "ArrowRight") translation[0] += step;
         drawScene();
